@@ -1,7 +1,15 @@
-/* :root {
+:root {
   --primary-color: #0076c6;
-  --blur: 10px;
-} */
+  --white: #ffffff;
+  --blur-light: #444950;
+  --blur: #f2f3f5;
+  --blur-dark: #cccccc;
+  --blur-darker: #828282;
+  --grey: #4a4a4a;
+  --black-light: #373737;
+  --black-lighter: #282828;
+  --black: #1c1c1c;
+}
 
 * {
   margin: 0;
@@ -20,7 +28,7 @@ a {
 }
 
 section {
-  background-color: #ffff;
+  background-color: var(--white);
   margin: 24px 88px;
   border-radius: 8px;
 }
@@ -32,7 +40,7 @@ article {
 }
 
 main {
-  background-color: rgb(218, 221, 225);
+  background-color: var(--blur);
   display: flex;
   max-width: 100%;
   flex-wrap: nowrap;
@@ -40,10 +48,10 @@ main {
 
 header {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  background-color: #ffff;
+  background-color: var(--white);
   position: sticky;
   z-index: 2;
   height: 56px;
@@ -62,6 +70,10 @@ header ul {
   width: 100%;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .logo {
   width: 25%;
 }
@@ -74,7 +86,7 @@ header ul {
 
 .logo > ul > li > a {
   font-size: 2.5rem;
-  color: royalblue;
+  color: var(--primary-color);
 }
 
 .logo > ul > li:last-child {
@@ -90,7 +102,7 @@ header ul {
   padding: 0.45rem 2rem;
   font-size: 0.8rem;
   height: 1.5rem;
-  background-color: lightgrey;
+  background-color: var(--blur);
 }
 
 .logo > ul > li:last-child > i {
@@ -106,22 +118,22 @@ header ul {
 }
 
 .basic-nav > ul {
-  margin: 0 3rem;
-  width: 100%;
   justify-content: space-around;
   vertical-align: center;
+  margin: 0 3rem;
+  width: 85%;
   align-items: center;
 }
 
 .basic-nav > ul > li > a {
   font-size: 1.5rem;
   color: grey;
-  padding: 0.3rem 2.5rem;
+  padding: 0.2rem 2rem;
 }
 
 .basic-nav > ul > li:first-child > a {
-  border-bottom: 3.5px solid royalblue;
-  color: royalblue;
+  border-bottom: 3.5px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
 .basic-nav > ul {
@@ -140,7 +152,7 @@ header ul {
 
 .user-nav > ul {
   width: 80%;
-  margin-top: 12px;
+  margin-top: -3px;
   margin-left: 5.5rem;
   justify-content: space-around;
 }
@@ -149,11 +161,20 @@ header ul {
   font-size: 1rem;
 }
 
+.user-nav > ul > li:first-child {
+  display: none;
+}
+
+.user-nav > ul > li:last-child .profile-pic {
+  width: 2.5rem;
+}
+
 .grey-circle {
   border-radius: 50%;
-  padding: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  align-items: center;
   position: relative;
-  background-color: lightgrey;
+  background-color: var(--blur);
 }
 
 .grey-circle:hover {
@@ -163,7 +184,7 @@ header ul {
 .grey-circle span {
   position: absolute;
   background-color: red;
-  color: white;
+  color: var(#ffffff);
   top: 0;
   border-radius: 50%;
   width: 13px;
@@ -172,8 +193,18 @@ header ul {
   text-align: center;
 }
 
+.grey-circle svg {
+  position: absolute;
+  color: var(--black);
+  font-size: 1.3rem;
+  left: 0.6rem;
+}
+
 .grey-circle > i {
-  color: black;
+  position: absolute;
+  color: var(--black);
+  font-size: 1.3rem;
+  left: 0.6rem;
 }
 
 /* body portion */
@@ -207,7 +238,8 @@ header ul {
   font-weight: 550;
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
-  color: black;
+  width: 100%;
+  color: var(--black-light);
 }
 
 .explore-nav-body > div > a span {
@@ -223,7 +255,7 @@ header ul {
 }
 
 .explore-nav-body > div:last-child i {
-  color: rgb(143, 143, 143);
+  color: var(--blur-dark);
   font-size: 1.5rem;
 }
 
@@ -237,12 +269,14 @@ header ul {
 }
 
 .explore-nav-footer {
+  width: 20rem;
+  margin-top: 1.7rem;
   padding-top: 1rem;
 }
 
 .explore-nav-footer > a {
-  font-size: 14px;
-  color: black;
+  font-size: 12px;
+  color: var(--blur-darker);
 }
 
 .explore-nav-footer > a:hover {
@@ -254,13 +288,13 @@ header ul {
 .stories {
   display: flex;
   flex-wrap: nowrap;
-  width: 93%;
-  margin: 0.5rem 9rem 0 6rem;
+  width: 100%;
+  margin-left: 5.5rem;
 }
 
 .stories-div > .profile-pic {
-  border: 3px solid #1b74e4;
-  width: 2.5rem;
+  border: 4px solid var(--primary-color);
+  width: 2.3rem;
   position: absolute;
   left: 0.5rem;
   top: 0.5rem;
@@ -272,7 +306,7 @@ header ul {
 }
 
 .stories-div {
-  width: 6.4rem;
+  width: 6.6rem;
   height: 12rem;
   margin: 0 0.3rem;
   border-radius: 10px;
@@ -283,7 +317,7 @@ header ul {
 .stories-div > span {
   position: absolute;
   bottom: 0;
-  color: #ffff;
+  color: var(#ffffff);
   z-index: 1;
 }
 
@@ -297,13 +331,15 @@ header ul {
 /* below srories portion */
 .whats-on-live-video {
   margin: -0.5rem 5.5rem;
-  background-color: #ffff;
+  background-color: var(#ffffff);
   border-radius: 20px;
 }
 
 /* .whats-on-live-video  */
 
 .whats-on {
+  display: flex;
+  flex-direction: row;
   margin: 2rem;
   align-items: center;
   border-bottom: 2px solid lightgray;
@@ -314,28 +350,38 @@ header ul {
   width: 85%;
   height: 2.2rem;
   padding-left: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 0.5rem;
   border: none;
-  background-color: lightgrey;
+  background-color: var(--blur);
 }
 
 .live-video {
   text-align: center;
   width: 100%;
-  padding: 0 0 2rem 0;
+  padding: 0 0 0.5rem 0;
+  display: flex;
+  margin-top: -15px;
+  justify-content: space-evenly;
 }
 
 .live-video > a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   font-size: 1.5rem;
   padding-left: 2rem;
 }
 
 .live-video > a > span {
   font-size: 1rem;
-  font-weight: 600;
-  color: black;
+  font-weight: 50;
+  color: var(--blur-darker);
   padding-left: 0.7rem;
+}
+
+.live-video a i {
+  color: "red";
 }
 
 live-video a:nth-child(2) svg {
@@ -352,7 +398,7 @@ live-video a:nth-child(2) svg {
 }
 
 .create-room-contents > div > img {
-  padding: 0.282rem;
+  padding: 0.45rem;
   width: 2.5rem;
 }
 
@@ -363,14 +409,20 @@ live-video a:nth-child(2) svg {
   align-items: center;
   border-radius: 40px;
   padding: 0.5rem;
-  margin-top: 0.3rem;
-  height: 1.5rem;
-  width: 8rem;
-  border: 2px solid lightblue;
+  margin-top: 0.6rem;
+  height: 1.3rem;
+  width: 7.8rem;
+  border: 1px solid rgb(202, 216, 220);
+}
+
+.create-room-button :hover {
+  background-color: var(--blur);
 }
 
 .create-room-button span {
-  color: royalblue;
+  color: var(--primary-color);
+  font-size: 15.5px;
+  font-weight: 500;
 }
 
 /* facebook post */
@@ -398,6 +450,18 @@ live-video a:nth-child(2) svg {
   width: 2.5rem;
 }
 
+.post-profile-time div:first-child {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--black-light);
+}
+
+.post-profile-time div:last-child {
+  font-size: 13px;
+  margin-top: 5px;
+  color: var(--blur-darker);
+}
+
 .like-comment-share {
   display: flex;
   flex-wrap: nowrap;
@@ -409,12 +473,12 @@ live-video a:nth-child(2) svg {
 
 .like-comment-share i {
   margin-right: 0.5rem;
-  color: darkslategrey;
+  color: var(--blur-darker);
 }
 
 .liked,
 .liked > i {
-  color: royalblue;
+  color: var(--primary-color);
 }
 
 .fa-earth {
@@ -438,7 +502,7 @@ live-video a:nth-child(2) svg {
 
 .online-active {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
 }
 
@@ -480,7 +544,7 @@ live-video a:nth-child(2) svg {
   padding: 0.5rem;
   font-weight: 550;
   align-items: center;
-  color: black;
+  color: var(--black-light);
   margin-left: 0.8rem;
 }
 
@@ -493,43 +557,59 @@ live-video a:nth-child(2) svg {
 }
 
 /* media queries */
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 480px) {
+
+@media only screen and (max-width: 800px) {
+  .user-nav {
+    display: none;
+  }
+
   aside {
     display: none;
+    margin: auto;
   }
 
   article {
     width: 100%;
-    left: 0;
+  }
+
+  .search {
+    display: none;
+  }
+
+  section {
+    margin: 0 0 0 3rem;
+  }
+
+  .user-nav > ul > li:first-child {
+    display: block;
+  }
+
+  header > div{
+    wi
   }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 768px) {
-  .left-aside {
+@media only screen and (max-width: 1100px) {
+  .explore-nav {
     display: none;
   }
-  .right-aside {
-    width: 30%;
-  }
-  .article {
+
+  article {
     width: 80%;
     margin-left: 0;
   }
+
+  .search {
+    display: none;
+  }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-/* @media only screen and (max-width: 1024px) {
-  ...;
-} */
+@media only screen and (max-width: 1300px) {
+  aside {
+    width: 15%;
+  }
 
-/* Large devices (laptops/desktops, 992px and up) */
-/* @media only screen and (max-width: 1200px) {
-  ...;
-} */
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (min-width: 1201px) {
-  ...;
-} */
+  .stories {
+    margin-left: 0;
+  }
+}
