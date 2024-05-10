@@ -1,6 +1,6 @@
 :root {
   --primary-color: #0076c6;
-  --white: #ffffff;
+  --white: #fff;
   --blur-light: #444950;
   --blur: #f2f3f5;
   --blur-dark: #cccccc;
@@ -9,6 +9,8 @@
   --black-light: #373737;
   --black-lighter: #282828;
   --black: #1c1c1c;
+  --small-size: 8px;
+  --rem: 16px;
 }
 
 * {
@@ -20,7 +22,7 @@
 ul > li {
   height: 100%;
   list-style: none;
-  border-radius: 8px;
+  border-radius: var(--small-size);
 }
 
 a {
@@ -30,13 +32,13 @@ a {
 section {
   background-color: var(--white);
   margin: 24px 88px;
-  border-radius: 8px;
+  border-radius: var(--small-size);
 }
 
 article {
   width: 50%;
   margin: auto;
-  padding: 16px;
+  padding: var(--rem);
 }
 
 main {
@@ -80,36 +82,36 @@ body {
 
 .logo > ul {
   height: 2.5rem;
-  margin-left: 16px;
-  margin-top: -0.3rem;
+  margin-left: var(--rem);
+  margin-top: -9px;
 }
 
 .logo > ul > li > a {
-  font-size: 2.5rem;
+  font-size: 44px;
   color: var(--primary-color);
 }
 
 .logo > ul > li:last-child {
-  margin-left: 1rem;
+  margin-left: var(--rem);
 }
 
 .logo > ul > li:last-child > input {
   position: relative;
   border-radius: 30px;
-  top: -0.45rem;
+  top: -4px;
   border: none;
-  width: 12rem;
-  padding: 0.45rem 2rem;
-  font-size: 0.8rem;
-  height: 1.5rem;
+  width: 192px;
+  padding: 7.2px 32px;
+  font-size: 12.8px;
+  height: 24px;
   background-color: var(--blur);
 }
 
 .logo > ul > li:last-child > i {
   position: absolute;
-  left: 5.3rem;
+  left: 5.4rem;
   top: 1.1rem;
-  font-size: 0.9rem;
+  font-size: 14.4px;
   color: grey;
 }
 
@@ -120,15 +122,15 @@ body {
 .basic-nav > ul {
   justify-content: space-around;
   vertical-align: center;
-  margin: 0 3rem;
-  width: 85%;
+  margin: auto;
+  width: 79%;
   align-items: center;
 }
 
 .basic-nav > ul > li > a {
-  font-size: 1.5rem;
+  font-size: 24px;
   color: grey;
-  padding: 0.2rem 2rem;
+  padding: 3.2px 32px;
 }
 
 .basic-nav > ul > li:first-child > a {
@@ -137,7 +139,7 @@ body {
 }
 
 .basic-nav > ul {
-  margin-top: 8px;
+  margin-top: var(--small-size);
 }
 
 .basic-nav > ul > li:hover {
@@ -151,14 +153,14 @@ body {
 }
 
 .user-nav > ul {
-  width: 80%;
-  margin-top: -3px;
-  margin-left: 5.5rem;
-  justify-content: space-around;
+  width: 52%;
+  justify-content: space-between;
+  float: right;
+  margin-right: 15px;
 }
 
 .user-nav > ul > li {
-  font-size: 1rem;
+  font-size: var(--rem);
 }
 
 .user-nav > ul > li:first-child {
@@ -166,12 +168,12 @@ body {
 }
 
 .user-nav > ul > li:last-child .profile-pic {
-  width: 2.5rem;
+  width: 40px;
 }
 
 .grey-circle {
   border-radius: 50%;
-  padding: 0.7rem 1.2rem;
+  padding: 12px 21px;
   align-items: center;
   position: relative;
   background-color: var(--blur);
@@ -188,7 +190,7 @@ body {
   top: 0;
   border-radius: 50%;
   width: 13px;
-  font-size: 0.7rem;
+  font-size: 11.2px;
   left: 1.5rem;
   text-align: center;
 }
@@ -196,15 +198,15 @@ body {
 .grey-circle svg {
   position: absolute;
   color: var(--black);
-  font-size: 1.3rem;
+  font-size: 19.5px;
   left: 0.6rem;
 }
 
 .grey-circle > i {
   position: absolute;
   color: var(--black);
-  font-size: 1.3rem;
-  left: 0.6rem;
+  font-size: 19.5px;
+  left: 0.8rem;
 }
 
 /* body portion */
@@ -212,19 +214,19 @@ body {
 .explore-nav {
   position: fixed;
   left: 0;
-  padding: 1rem;
+  padding: var(--rem);
 }
 
 .explore-nav-body {
   display: flex;
   flex-direction: column;
-  padding-bottom: 1rem;
-  margin-top: 1rem;
+  padding-bottom: var(--rem);
+  margin-top: var(--rem);
   border-bottom: 1.5px solid rgb(193, 193, 193);
 }
 
 .explore-nav-body > div {
-  padding-bottom: 0.5rem;
+  padding-bottom: var(--small-size);
   color: blueviolet;
 }
 
@@ -236,31 +238,31 @@ body {
   display: flex;
   align-items: center;
   font-weight: 550;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
+  font-size: 14.4px;
+  margin-bottom: var(--small-size);
   width: 100%;
   color: var(--black-light);
 }
 
 .explore-nav-body > div > a span {
-  margin-left: 0.5rem;
+  margin-left: var(--small-size);
 }
 
 .kripa-home span {
-  margin-left: 3rem;
+  margin-left: 48px;
 }
 
 .explore-nav-body > div > i {
-  font-size: 1.3rem;
+  font-size: 20.8;
 }
 
 .explore-nav-body > div:last-child i {
   color: var(--blur-dark);
-  font-size: 1.5rem;
+  font-size: 24px;
 }
 
 .profile-pic {
-  width: 1.8rem;
+  width: 28.8px;
   border-radius: 50%;
 }
 
@@ -270,8 +272,8 @@ body {
 
 .explore-nav-footer {
   width: 20rem;
-  margin-top: 1.7rem;
-  padding-top: 1rem;
+  margin-top: 27.2px;
+  padding-top: var(--rem);
 }
 
 .explore-nav-footer > a {
@@ -289,12 +291,12 @@ body {
   display: flex;
   flex-wrap: nowrap;
   width: 100%;
-  margin-left: 5.5rem;
+  margin-left: 88px;
 }
 
 .stories-div > .profile-pic {
   border: 4px solid var(--primary-color);
-  width: 2.3rem;
+  width: 36.8px;
   position: absolute;
   left: 0.5rem;
   top: 0.5rem;
@@ -308,7 +310,7 @@ body {
 .stories-div {
   width: 6.6rem;
   height: 12rem;
-  margin: 0 0.3rem;
+  margin: 0 4.8px;
   border-radius: 10px;
   position: relative;
   overflow: hidden;
@@ -330,7 +332,7 @@ body {
 
 /* below srories portion */
 .whats-on-live-video {
-  margin: -0.5rem 5.5rem;
+  margin: -8px 88px;
   background-color: var(#ffffff);
   border-radius: 20px;
 }
@@ -340,7 +342,7 @@ body {
 .whats-on {
   display: flex;
   flex-direction: row;
-  margin: 2rem;
+  margin: 32px;
   align-items: center;
   border-bottom: 2px solid lightgray;
 }
@@ -348,10 +350,10 @@ body {
 .whats-on > input {
   border-radius: 30px;
   width: 85%;
-  height: 2.2rem;
-  padding-left: 1rem;
-  font-size: 1.1rem;
-  margin: 0.5rem;
+  height: 35.2px;
+  padding-left: var(--rem);
+  font-size: 17.6px;
+  margin: var(--small-size);
   border: none;
   background-color: var(--blur);
 }
@@ -359,7 +361,7 @@ body {
 .live-video {
   text-align: center;
   width: 100%;
-  padding: 0 0 0.5rem 0;
+  padding: 0 0 8px 0;
   display: flex;
   margin-top: -15px;
   justify-content: space-evenly;
@@ -369,15 +371,15 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 1.5rem;
-  padding-left: 2rem;
+  font-size: 24px;
+  padding-left: 32px;
 }
 
 .live-video > a > span {
-  font-size: 1rem;
+  font-size: var(--rem);
   font-weight: 50;
   color: var(--blur-darker);
-  padding-left: 0.7rem;
+  padding-left: 11.2px;
 }
 
 .live-video a i {
@@ -393,13 +395,13 @@ live-video a:nth-child(2) svg {
 .create-room-contents {
   display: flex;
   flex-wrap: nowrap;
-  margin-left: 0.7rem;
+  margin-left: 11.2px;
   overflow: hidden;
 }
 
 .create-room-contents > div > img {
-  padding: 0.45rem;
-  width: 2.5rem;
+  padding: 7.2px;
+  width: 40px;
 }
 
 .create-room-button {
@@ -408,10 +410,10 @@ live-video a:nth-child(2) svg {
   justify-content: space-between;
   align-items: center;
   border-radius: 40px;
-  padding: 0.5rem;
-  margin-top: 0.6rem;
-  height: 1.3rem;
-  width: 7.8rem;
+  padding: 9.6px;
+  margin-top: 9.6px;
+  height: 20.8px;
+  width: 124.8px;
   border: 1px solid rgb(202, 216, 220);
 }
 
@@ -433,13 +435,13 @@ live-video a:nth-child(2) svg {
 }
 
 .profile-info-block {
-  margin: 0.5rem;
+  margin: var(--small-size);
 }
 
 .profile-info-block > div {
   display: block;
   float: left;
-  padding: 0.5rem;
+  padding: var(--small-size);
 }
 
 .profile-info-block > div:last-child {
@@ -447,7 +449,7 @@ live-video a:nth-child(2) svg {
 }
 
 .profile-info .profile-pic {
-  width: 2.5rem;
+  width: 40px;
 }
 
 .post-profile-time div:first-child {
@@ -465,14 +467,14 @@ live-video a:nth-child(2) svg {
 .like-comment-share {
   display: flex;
   flex-wrap: nowrap;
-  padding: 1rem;
-  margin: 0.5rem;
+  padding: var(--rem);
+  margin: var(--small-size);
   justify-content: space-around;
   border-top: 2px solid rgb(215, 215, 215);
 }
 
 .like-comment-share i {
-  margin-right: 0.5rem;
+  margin-right: var(--small-size);
   color: var(--blur-darker);
 }
 
@@ -482,7 +484,7 @@ live-video a:nth-child(2) svg {
 }
 
 .fa-earth {
-  font-size: 0.8rem;
+  font-size: 12.8px;
 }
 
 .post-pic {
@@ -494,9 +496,9 @@ live-video a:nth-child(2) svg {
 .contacts-menu {
   opacity: 0.5;
   position: fixed;
-  padding: 1rem;
+  padding: var(--rem);
   right: 0;
-  margin-left: 3rem;
+  margin-left: 48px;
   width: 23.5%;
 }
 
@@ -511,14 +513,14 @@ live-video a:nth-child(2) svg {
 } */
 
 .online-active > li:first-child {
-  font-size: 1.1rem;
+  font-size: 17.6px;
   font-weight: 600;
-  margin-left: 0.5rem;
-  padding: 0.7rem;
+  margin-left: var(--small-size);
+  padding: 11.2px;
 }
 
 .online-active > li:last-child ul li {
-  font-size: 0.99rem;
+  font-size: 15.84px;
 }
 
 .toppers-contacts {
@@ -527,8 +529,8 @@ live-video a:nth-child(2) svg {
 }
 
 .toppers-contacts > li {
-  padding: 0.7rem;
-  font-size: 1.1rem;
+  padding: 11.2px;
+  font-size: 17.6px;
   border-radius: 50%;
 }
 
@@ -537,19 +539,19 @@ live-video a:nth-child(2) svg {
 }
 
 .only-actives > li a {
-  font-size: 0.95rem;
+  font-size: 15.2px;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  padding: 0.5rem;
+  padding: var(--small-size);
   font-weight: 550;
   align-items: center;
   color: var(--black-light);
-  margin-left: 0.8rem;
+  margin-left: 12.8px;
 }
 
 .only-actives > li a span {
-  margin-left: 0.7rem;
+  margin-left: 11.2px;
 }
 
 .only-actives > li:hover {
@@ -577,15 +579,15 @@ live-video a:nth-child(2) svg {
   }
 
   section {
-    margin: 0 0 0 3rem;
+    margin: 0 0 8px 48px;
+  }
+
+  .whats-on-live-video {
+    margin: 0 0 0 48px;
   }
 
   .user-nav > ul > li:first-child {
     display: block;
-  }
-
-  header > div{
-    wi
   }
 }
 
